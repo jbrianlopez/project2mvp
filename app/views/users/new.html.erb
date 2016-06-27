@@ -1,4 +1,8 @@
-<h1>New User</h1>
+<% if @user.errors.any? %>
+  <%= @user.errors.full_messages %>
+  <% else %>
+    <h1>Welcome</h1>
+    <% end %>
 
 <%= render 'form', user: @user %>
 
