@@ -33,7 +33,7 @@
     <% @posts.each do |post| %>
       <tr class = "post">
         <td><%= post.title %></td>
-        <td><%= post.body %></td>
+        <td><%= link_to post.body, user_post_path(post.user, post) %></td>
         <td><%= post.user.email %></td>
         <td><%= link_to 'Show', user_post_path(post.user, post) %></td>
         <% if current_user == post.user %>
