@@ -1,7 +1,19 @@
 
 
 <h1>Everything!@#</h1>
-
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+        <nav>
+<% if user_logged_in? %>
+<h3> hello, <%= current_user.email%> </h3>
+<%= link_to "Sign Out", sign_out_path, method: :delete %>
+<%= link_to 'New Post', new_user_post_path(current_user) %>
+<% else %>
+<%= link_to "Sign In", sign_in_path %>
+<%= link_to 'Sign Up', new_user_path %>
+<% end %>
+</nav>
+</div>
 <table>
   <thead>
     <tr>
@@ -27,14 +39,5 @@
     <% end %>
   </tbody>
 </table>
-<% if user_logged_in? %>
-<h3> hello, <%= current_user.email%> </h3>
-<%= link_to "Sign Out", sign_out_path, method: :delete %>
-<%= link_to 'New Post', new_user_post_path(current_user) %>
-<% else %>
-<%= link_to "Sign In", sign_in_path %>
-<%= link_to 'Sign Up', new_user_path %>
-
-<% end %>
 
 <br>
