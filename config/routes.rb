@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+
 get 'sign_up', to: 'users#new', as: :sign_up
   # resources :posts
   # resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-root 'posts#index', as: 'home'
+root 'home#index', as: 'home'
 # get 'sign_in', to:
 #
 # get '/', to: 'home#index', as: :home

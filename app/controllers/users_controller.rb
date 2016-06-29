@@ -22,6 +22,9 @@ end
 
   # GET /users/1/edit
   def edit
+    unless @user == current_user
+      redirect_to home_path, notice: "This post doesn't belong to you!"
+    end
   end
 
   # POST /users
