@@ -1,24 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is an MVP for project2a, a microblog. 
+I'm deploying the MVP because I have an issue with the current version.
+location is https://dry-eyrie-82938.herokuapp.com/
+location on Github https://github.com/jbrianlopez/project2mvp.git
